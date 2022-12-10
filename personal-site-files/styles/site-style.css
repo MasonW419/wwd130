@@ -25,7 +25,12 @@
     margin: 0;
     padding: 0;
 }
-img {
+h1 {
+    color: #66A3BB;
+    text-align: center;
+    font-size: 4em;
+}
+a img {
     width: 10em;
 }
 li, a, button {
@@ -95,7 +100,85 @@ body {
     width: 100%;
     background-color: #253A47;
     border: 5px solid black;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 10px;
 }
+.slide-show-container {
+    position: relative;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+}
+.mySlides {
+    display: none;
+  }
+.cursor {
+    cursor: pointer;
+}
+.prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
 .page {
     background-color: #66A3BB;
 }
@@ -106,17 +189,49 @@ body {
     padding-right: 25px;
     margin: 10px;
 }
-.main-picture-box {
-    padding-top: 10px;
-    padding-left: 25px;
-    padding-right: 25px;
-    margin: 10px;
-}
+
 .intro-box {
     background-color: #66A3BB;
 }
 .sub-picture-box {
     align-self: flex-end;
+}
+#altw-box-1 {
+    /* padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin: 10px; */
+    width: 100%;
+    height: 100px;
+    grid-column: 1/9;
+    grid-row: 1/2;
+    z-index: 2;
+}
+#altw-box-2 {
+    /* position: relative;
+    margin: auto;
+    width: 1fr;
+    height: 1fr; */
+    /* padding-left: 25px;
+    padding-right: 25px;
+    margin-top: 10px;
+    margin-right: 25px;*/
+    /* background-image: url('wwd130\personal-site-files\images\water img 2.jpeg'); */
+    width: 100%;
+    /* margin: auto;
+    float: right; */
+    min-height: 400px;
+    max-height: 800;
+    grid-column: 5/9;
+    grid-row: 2/3;
+}
+#altw-box-3 {
+    grid-column: 1/5;
+    grid-row: 1/4;
+    background-color: #66A3BB;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 #w-box-1 {
     /* padding-top: 10px;
@@ -130,19 +245,26 @@ body {
     z-index: 2;
 }
 #w-box-2 {
+    /* position: relative;
+    margin: auto;
+    width: 1fr;
+    height: 1fr; */
     /* padding-left: 25px;
     padding-right: 25px;
     margin-top: 10px;
-    margin-right: 25px; */
+    margin-right: 25px;*/
+    /* background-image: url('wwd130\personal-site-files\images\water img 2.jpeg'); */
     width: 100%;
+    /* margin: auto;
+    float: right; */
     min-height: 400px;
     max-height: 800;
     grid-column: 5/9;
-    grid-row: 1/3;
+    grid-row: 1/4;
 }
 #w-box-3 {
     grid-column: 1/5;
-    grid-row: 1/4;
+    grid-row: 1/5;
     background-color: #66A3BB;
     width: 80%;
     margin-left: auto;
@@ -170,7 +292,7 @@ body {
 }
 #w-box-8 {
     width: auto;
-    height: 100px;
+    height: 50px;
     grid-column: 1/9;
     background-color: white;
     border: none;
@@ -179,7 +301,7 @@ body {
 #w-box-9 {
     width: 100%;
     height: 1000px;
-    grid-column: 2/8;
+    grid-column: 1/9;
     background-color: #66A3BB;
 }
 .h-sheet {
@@ -272,6 +394,7 @@ body {
     height: 100px;
     grid-column: 1/2;
 }
+
 
 #n-box-1 {
     /* padding-top: 10px;

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water</title>
+    <link rel="stylesheet" href="styles/site-style.css">
+    <!-- https://masonw419.github.io/wwd130/personal-site-files/alt-water-article.html -->
+</head>
+<body>
+    <div class="content">
+        <header>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="personal-site-nav.html">Articles</a></li>
+                    <li></li>
+                    <li><a href=""></a></li>
+                </ul>
+            </nav>
+            <a href="personal-site-home.html">
+                <img class="logo" src="images/Vial-logos.jpeg" alt="Vial Logo">
+            </a>
+            <nav>
+                <ul class="nav_links">
+                    <li><a href="">FAQ</a></li>
+                    <li></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="sheet">
+                <div class="rect" class="heading-box" id="altw-box-1">
+                    <h1>Water</h1>
+                </div>
+                <div class="rect" id="altw-box-2">
+                    <div class="slide-show-container">
+                 
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 4</div>
+                          <img src="images\water img 1.webp" style="width:100%">
+                      </div>
+                    
+                      <div class="mySlides">
+                        <div class="numbertext">2 / 4</div>
+                          <img src="images\water img 2.jpeg" style="width:100%">
+                      </div>
+                    
+                      <div class="mySlides">
+                        <div class="numbertext">3 / 4</div>
+                          <img src="images\water img 3.jpeg" style="width:100%">
+                      </div>
+                    
+                      <div class="mySlides">
+                        <div class="numbertext">4 / 4</div>
+                          <img src="images\water img 4.jpeg" style="width:100%">
+                      </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                    <div class="caption-container">
+                    <p id="caption"></p>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                          <img class="demo cursor" src="images\water img 1.webp" style="width:100%" onclick="currentSlide(1)" alt="Ocean Water">
+                        </div>
+                        <div class="column">
+                          <img class="demo cursor" src="images\water img 2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Tidal Wave">
+                        </div>
+                        <div class="column">
+                          <img class="demo cursor" src="images\water img 3.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Water Flow">
+                        </div>
+                        <div class="column">
+                          <img class="demo cursor" src="images\water img 4.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Underwater Bubbles">
+                        </div>
+                      </div>
+
+                    </div>
+                
+            </div>
+                <!-- <div class="rect" id="w-box-3"></div>  -->
+            <!-- <div class="rect" class="sub-picture-box" id="w-box-4"><img src="images\water img 2.jpeg" style="object-fit: cover;" alt="Cinque Terre"></div>  -->
+                <!-- <div class="rect" class="sub-picture-box" id="w-box-5"></div> 
+                <div class="rect" class="sub-picture-box" id="w-box-6"></div> 
+                <div class="rect" class="sub-picture-box" id="w-box-7"></div> -->
+                <div class="rect" id="w-box-8"></div>
+                <div class="rect" class="page" id="w-box-9">
+                
+                </div>
+            </div>
+        </main>
+
+        <footer>
+
+        </footer>
+    </div>
+    <script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+    </script>
+</body>
+</html>
